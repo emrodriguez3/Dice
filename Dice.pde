@@ -5,8 +5,7 @@ void setup()
   }
   void draw()
   {
-      
-      background(192);
+      background(255,204,0);
       int dotSum = 0;
       for(int x = 11; x >= 0 ;x--){
         Die n = new Die(x*50,x*0);
@@ -47,7 +46,7 @@ void setup()
       }
       void show()
       {
-          square(this.coordinateX,this.coordinateY,50);
+         rect(this.coordinateX,this.coordinateY,50,50);
           if(roll == 1){
             fill(242, 20,20);
             ellipse(coordinateX +25 , coordinateY+25,7,7);
@@ -93,3 +92,4 @@ void setup()
          
       }
   }
+
