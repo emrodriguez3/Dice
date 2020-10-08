@@ -5,7 +5,7 @@ void setup()
   }
   void draw()
   {
-      background(0,0,0);
+  
       int dotSum = 0;
       for(int x = 11; x >= 0 ;x--){
         Die n = new Die(x*50,x*0);
