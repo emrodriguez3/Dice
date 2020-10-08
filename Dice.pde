@@ -15,7 +15,7 @@ void setup()
         Die g = new Die(x*50,y*50);
         g.roll();
         g.show();
-        dotSum = dotSum + n.roll;
+        dotSum = dotSum + n.roller;
         }
       }
       fill(255);
@@ -32,7 +32,7 @@ void setup()
   {
       int coordinateX;
       int coordinateY;
-      int roll = 1;
+      int roller = 1;
       int sum = 0;
       Die(int x, int y) //constructor
       {
@@ -41,36 +41,36 @@ void setup()
       }
       void roll()
       {
-         this.roll = (int)(Math.random()*6+1);
+         this.roller = (int)(Math.random()*6+1);
  
       }
       void show()
       {
          rect(this.coordinateX,this.coordinateY,50,50);
-          if(roll == 1){
+          if(roller == 1){
             fill(242, 20,20);
             ellipse(coordinateX +25 , coordinateY+25,7,7);
           } 
-          else if (roll == 2){
+          else if (roller == 2){
             fill(242,20,20);
             ellipse(coordinateX +10, coordinateY +10, 7, 7);
             ellipse(coordinateX +40, coordinateY + 40, 7, 7);
           }
-          else if(roll == 3){
+          else if(roller == 3){
           fill(242,20,20);
           ellipse(coordinateX +25, coordinateY +25, 7, 7);
           ellipse(coordinateX +10, coordinateY +10, 7, 7);
           ellipse(coordinateX +40, coordinateY +40, 7, 7);
           
           }
-          else if(roll == 4){
+          else if(roller == 4){
           fill(242,20,20);
           ellipse(coordinateX +10, coordinateY +10, 7, 7);
           ellipse(coordinateX +40, coordinateY +40, 7, 7);
           ellipse(coordinateX +40, coordinateY +10, 7, 7);
           ellipse(coordinateX +10, coordinateY +40, 7, 7);
           }
-          else if (roll == 5){
+          else if (roller == 5){
           fill(242,20,20);
           ellipse(coordinateX +25, coordinateY +25, 7, 7);
           ellipse(coordinateX +10, coordinateY +10, 7, 7);
@@ -92,4 +92,5 @@ void setup()
          
       }
   }
+
 
