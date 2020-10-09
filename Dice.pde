@@ -11,11 +11,13 @@ void setup()
         Die n = new Die(x*50,x*0);
         n.roll();
         n.show(); 
+         dotSum = dotSum + n.roller;
         for(int y = 11; y > 0; y--){
         Die g = new Die(x*50,y*50);
         g.roll();
         g.show();
-        dotSum = dotSum + n.roller;
+         dotSum = dotSum + g.roller;
+        
         }
       }
       fill(255);
@@ -28,13 +30,12 @@ void setup()
   {
       redraw();
   }
-  class Die //models one single dice cube
+  class Die 
   {
       int coordinateX;
       int coordinateY;
       int roller = 1;
-      int sum = 0;
-      Die(int x, int y) //constructor
+      Die(int x, int y) 
       {
           this.coordinateX = x; 
           this.coordinateY = y;
@@ -46,7 +47,7 @@ void setup()
       }
       void show()
       {
-         rect(this.coordinateX,this.coordinateY,50,50);
+        rect(this.coordinateX,this.coordinateY,50,50);
           if(roller == 1){
             fill(242, 20,20);
             ellipse(coordinateX +25 , coordinateY+25,7,7);
@@ -92,5 +93,3 @@ void setup()
          
       }
   }
-
-
